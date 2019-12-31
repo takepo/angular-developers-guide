@@ -3,20 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <table>
-    <tr>
-      <td [attr.colspan]="colspanSize">2セル分を1セルとする</td>
-    </tr>
-    <tr>
-      <td>1セル目</td>
-      <td>2セル目</td>
-    </tr>
-  </table>
+    <p class="underline xLarge" [class.bold]="isActive">class buinding</p>
   `,
   styles: [
-    'table, tr{ border: solid 1px #333 }'
+    `
+      .bold { font-weight: bold; }
+      .underline { text-decoration: underline; }
+      .xLarge { font-size: x-large; }
+    `
   ]
 })
 export class AppComponent {
-  colspanSize = 2;
+  isActive = true;
 }
