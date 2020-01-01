@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SimpleComponent } from './simple/simple.component';
 import { UnderlineDirective } from './underline.directive';
+import { CalcService } from './calc.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { UnderlineDirective } from './underline.directive';
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CalcService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
