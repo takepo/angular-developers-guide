@@ -5,10 +5,10 @@ import { Directive, OnInit, ElementRef } from '@angular/core';
 })
 export class UnderlineDirective implements OnInit {
 
-  constructor(private ElementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
-    const element = this.ElementRef.nativeElement as HTMLElement;
+    const element = this.elementRef.nativeElement as HTMLElement;
     element.style.textDecoration = 'underline';
   }
 
