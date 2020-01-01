@@ -3,9 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <p [style.font-size.%]="isActive? 50:300">style buinding</p>
+    <div>
+      <input type="text" [(ngModel)]="model">
+      <p>{{model}}</p>
+    </div>
   `,
 })
 export class AppComponent {
-  isActive = true;
+  model = 'two way binding!';
 }
