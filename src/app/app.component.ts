@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <p>UpperCasePipe {{lowercaseData}} -> {{lowercaseData | uppercase}}</p>
+    <p>DataPipe {{dateData}} -> {{dateData | date: 'yyyy年MM月dd日'}}</p>
+  `
 })
 export class AppComponent {
-  directives = [
-    'hoge',
-    'fuga',
-  ]
+  lowercaseData = 'angular';
+  dateData = Date.now();
 }
