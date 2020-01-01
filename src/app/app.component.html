@@ -1,38 +1,8 @@
-<ul>
-  <li *ngFor="let directive of directives">{{directive}}</li>
-</ul>
+<button (click)="model1 = !model1">Click Me</button>
+<p *ngIf="model1">Hello Angular !!</p>
 
-<ul>
-  <li *ngFor="let directive of directives; index as idx">{{idx}} - {{directive}}</li>
-</ul>
-
-<ul>
-  <li *ngFor="let directive of directives; even as IsEven; odd as Odd;">
-    <div [ngClass]="{ 'even': isEven, 'odd': isOdd }">{{directive}}</div>
-  </li>
-</ul>
-
-<ul>
-  <li *ngFor="let directive of directives; first as IsFirst; last as isLast;">
-    <div [ngClass]="{ 'first': IsFirst, 'last': isLast }">{{directive}}</div>
-  </li>
-</ul>
-
-<style>
-  .even {
-    background-color: #ccc,
-  }
-
-  .odd {
-    color: #fff;
-    background-color: #999;
-  }
-
-  .first {
-    font-size: x-small;
-  }
-  
-  .last {
-    font-size: x-large;
-  }
-</style>
+<button (click)="model2 = !model2">Click Me</button>
+<p *ngIf="model2; else elseCase">Truthy ケース</p>
+<ng-template #elseCase>
+  <div>Falsyケース</div>
+</ng-template>
