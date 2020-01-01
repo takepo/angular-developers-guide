@@ -1,41 +1,8 @@
-<button [ngClass]="btn btn-default">ngClass Sample</button>
+<p [ngStyle]="{'font-size': '30px'}">NgStyle Sample</p>
 
-<button [ngClass]="['btn', 'btn-default']">ngClass Sample2</button>
+<label><input type="radio" name="size" value="30" [(ngModel)]="check1">30px</label>
+<label><input type="radio" name="size" value="50" [(ngModel)]="check1">50px</label>
 
-<button
-  [ngClass]="{ 'btn btn-default': sample3 }"
-  (click)="sample3 = !sample3"
->ngClass Sample3</button>
+<p [ngStyle]="{'font-size': check1 + 'px' }">NgStyle Sample</p>
 
-<button
-  [ngClass]="{ 'btn-default': !sample4, 'btn-info': sample4 }"
-  (click)="sample4 = !sample4"
->ngClass Sample4</button>
-
-
-<style>
-  .btn {
-    display: block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.4;
-    border-radius: 4px;
-  }
-
-  .btn-default {
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-  }
-
-  .btn-info {
-    color: #fff;
-    background-color: #666;
-    border-color: #ccc;
-  }
-</style>
+<p [ngStyle]="style1">NgStyle Sample</p>
