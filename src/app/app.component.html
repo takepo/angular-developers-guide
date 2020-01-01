@@ -1,0 +1,41 @@
+<button [ngClass]="btn btn-default">ngClass Sample</button>
+
+<button [ngClass]="['btn', 'btn-default']">ngClass Sample2</button>
+
+<button
+  [ngClass]="{ 'btn btn-default': sample3 }"
+  (click)="sample3 = !sample3"
+>ngClass Sample3</button>
+
+<button
+  [ngClass]="{ 'btn-default': !sample4, 'btn-info': sample4 }"
+  (click)="sample4 = !sample4"
+>ngClass Sample4</button>
+
+
+<style>
+  .btn {
+    display: block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 4px;
+  }
+
+  .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+
+  .btn-info {
+    color: #fff;
+    background-color: #666;
+    border-color: #ccc;
+  }
+</style>

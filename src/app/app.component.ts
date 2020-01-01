@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { CalcService } from './calc.service';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-parent></app-parent>
-  `,
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
 }
