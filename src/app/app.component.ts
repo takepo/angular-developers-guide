@@ -4,11 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
-      <input type="text" [(ngModel)]="model">
-      <p>{{model}}</p>
+      <app-simple></app-simple>
     </div>
   `,
 })
 export class AppComponent {
-  model = 'two way binding!';
 }
