@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <div>
       <app-simple></app-simple>
+      <div appUnderline>appUnderline</div>
     </div>
   `,
 })
