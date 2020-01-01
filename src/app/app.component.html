@@ -1,8 +1,19 @@
-<button (click)="model1 = !model1">Click Me</button>
-<p *ngIf="model1">Hello Angular !!</p>
+<label>
+  <input type="radio" name="switch" value="morning" [(ngModel)]="model1">
+  あさ
+</label>
+<label>
+  <input type="radio" name="switch" value="moon" [(ngModel)]="model1">
+  ひる
+</label>
+<label>
+  <input type="radio" name="switch" value="night" [(ngModel)]="model1">
+  よる
+</label>
 
-<button (click)="model2 = !model2">Click Me</button>
-<p *ngIf="model2; else elseCase">Truthy ケース</p>
-<ng-template #elseCase>
-  <div>Falsyケース</div>
-</ng-template>
+<div [ngSwitch]="model1">
+  <div *ngSwitchCase="'morning'">おはよう</div>
+  <div *ngSwitchCase="'moon'">こんにちわ</div>
+  <div *ngSwitchCase="'night'">こんばんわ</div>
+  <div *ngSwitchDefault>選んでください</div>
+</div>
