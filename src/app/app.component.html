@@ -1,8 +1,38 @@
-<p [ngStyle]="{'font-size': '30px'}">NgStyle Sample</p>
+<ul>
+  <li *ngFor="let directive of directives">{{directive}}</li>
+</ul>
 
-<label><input type="radio" name="size" value="30" [(ngModel)]="check1">30px</label>
-<label><input type="radio" name="size" value="50" [(ngModel)]="check1">50px</label>
+<ul>
+  <li *ngFor="let directive of directives; index as idx">{{idx}} - {{directive}}</li>
+</ul>
 
-<p [ngStyle]="{'font-size': check1 + 'px' }">NgStyle Sample</p>
+<ul>
+  <li *ngFor="let directive of directives; even as IsEven; odd as Odd;">
+    <div [ngClass]="{ 'even': isEven, 'odd': isOdd }">{{directive}}</div>
+  </li>
+</ul>
 
-<p [ngStyle]="style1">NgStyle Sample</p>
+<ul>
+  <li *ngFor="let directive of directives; first as IsFirst; last as isLast;">
+    <div [ngClass]="{ 'first': IsFirst, 'last': isLast }">{{directive}}</div>
+  </li>
+</ul>
+
+<style>
+  .even {
+    background-color: #ccc,
+  }
+
+  .odd {
+    color: #fff;
+    background-color: #999;
+  }
+
+  .first {
+    font-size: x-small;
+  }
+  
+  .last {
+    font-size: x-large;
+  }
+</style>

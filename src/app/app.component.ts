@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  style1 = {
-    'font-weight': 'boid',
-    'text-decoration': 'line-through',
-  }
+  directives = [
+    'hoge',
+    'fuga',
+  ]
 }
