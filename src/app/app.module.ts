@@ -7,13 +7,15 @@ import { SimpleComponent } from './simple/simple.component';
 import { UnderlineDirective } from './underline.directive';
 import { CalcService } from './calc.service';
 import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleComponent,
     UnderlineDirective,
-    ParentComponent
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
