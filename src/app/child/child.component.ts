@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  template: `
+    <div>
+      ID: {{person.id}}, Name: {{person.name}}
+      <input type="button" value="選ぶ" (click)="click(person)"/>
+    </div>
+  `
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent {
+
+  @Input() person: any;
+  @Output() selected = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
+  click(person): any {
+    this.selected.emit(person);
   }
 
 }
